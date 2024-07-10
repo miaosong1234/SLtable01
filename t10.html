@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* #region 随机模块*/
+    .topBack {
+      position: fixed;
+      right: 180px;
+      bottom: 180px;
+      box-sizing: border-box;
+      width: 120px;
+      height: 120px;
+      border: 1px solid brown;
+      padding: 15px;
+      line-height: 44px;
+      font-size: 24px;
+      text-align: center;
+
+    }
+
+
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+
+    }
+
+    .header {
+      height: 200px;
+      background-color: gray;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .body {
+      height: 900px;
+      /* background-color: rgb(253, 247, 247); */
+    }
+
+    .footer {
+      height: 200px;
+      background-color: rgb(53, 44, 44);
+    }
+
+    .topBack {
+      cursor: pointer;
+    }
+
+    /* #endregion */
+  </style>
+</head>
+
+<body>
+  <div class="header container">导航栏</div>
+  <div class="body container">内容区</div>
+  <div class="footer container">底部信息</div>
+
+  <div class="topBack">
+    <span>点我返回顶部</span>
+  </div>
+  <script>
+    const tbkBtn = document.querySelector('.topBack')
+    tbkBtn.addEventListener('mouseenter', function () {
+      document.documentElement.scrollTop = 400
+    })
+    tbkBtn.addEventListener('click', function () {
+      document.documentElement.scrollTop = 0
+    })
+
+  </script>
+
+</body>
+
+</html>
